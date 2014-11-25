@@ -8,6 +8,12 @@ a {
   color: #333;
   font-size: 14px;
   text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  color: DarkCyan;
+  text-decoration: underline;
 }
 
 h1 {
