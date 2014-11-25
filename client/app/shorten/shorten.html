@@ -1,6 +1,23 @@
-<div id='container'>
-  <input ng-model='link'></input>
-  <button ng-click='addLink()'>Clicky McCickerton</button>
+<div id='container' ng-controller="ShortenController">
+  <form name='inputForm'>
+    Enter URL to shorten:<input type='url' name='input' ng-model='link' required>
+    <button ng-hide="inputForm.input.$error.url" ng-click='addLink()'>Clicky McCickerton</button>
+    <div class="error" ng-show="inputForm.input.$error.url">Not a valid url!</div>
+  </form>
 </div>
 
 
+<!--
+
+  <form name="myForm">
+    User name: <input type="text" name="userName" ng-model="user.name" required>
+    <span class="error" ng-show="myForm.userName.$error.required">
+      Required!</span><br>
+    Last name: <input type="text" name="lastName" ng-model="user.last"
+      ng-minlength="3" ng-maxlength="10">
+    <span class="error" ng-show="myForm.lastName.$error.minlength">
+      Too short!</span>
+    <span class="error" ng-show="myForm.lastName.$error.maxlength">
+      Too long!</span><br>
+  </form>
+ -->

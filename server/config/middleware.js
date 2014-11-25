@@ -22,6 +22,11 @@ module.exports = function (app, express) {
   app.use(helpers.errorLogger);
   app.use(helpers.errorHandler);
 
+
+  // copy-pasted from linkRoutes.js as an experiment
+  // app.param('code', linksController.findUrl);
+  // app.get('/:code', linksController.navToLink);
+
   // inject our routers into their respective route files
   require('../users/userRoutes.js')(userRouter);
   require('../links/linkRoutes.js')(linkRouter);
