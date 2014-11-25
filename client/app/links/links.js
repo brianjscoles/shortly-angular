@@ -3,7 +3,6 @@ angular.module('shortly.links', [])
 .controller('LinksController', function ($scope, $http, Links) {
   $scope.data = {};
   $scope.getLinks = function(){
-    alert('this is getLinks');
     //get links from mongodb
     //callback will set data array equal to links from db
     $http.get('/api/links')

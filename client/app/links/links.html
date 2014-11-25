@@ -1,4 +1,10 @@
 <div ng-controller="LinksController" id='container'>
-  {{ data.links }}
-  <!-- Your html here -->
+  <!-- {{ data.links }} -->
+
+  <ul>
+    <li ng-repeat="link in data.links"> <a href={{link.code}}>127.0.0.1:3000/code:{{link.code}}</a> - {{ link.title }} {{link}}</li>
+  </ul>
 </div>
+
+
+<!-- 127.0.01:3000/code:57wfJ -->
