@@ -7,13 +7,17 @@
   </head>
   <body>
     <h1>Shortly</h1>
-    <a href='#/links'>Links View</a><span> | </span>
-    <a href='#/shorten'>Shorten View</a>
     <!-- the ng-view directive is where our templates will be loaded when link specified in routes is naviagted to -->
-    <div ng-view></div>
 
+    <a ui-sref="stateShorten">Shorten View</a><span> | </span>
+    <a ui-sref="stateLinks">Links View</a><span> | </span>
+    <a ui-sref="stateSignin">Sign In</a><span> | </span>
+    <a ui-sref="stateSignup">Sign Up</a>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <div ui-view></div>
 
     <script src="app/auth/auth.js"></script>
     <script src="app/links/links.js"></script>
