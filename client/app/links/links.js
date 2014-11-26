@@ -1,22 +1,16 @@
 angular.module('shortly.links', [])
 
 .controller('LinksController', function ($scope, $http, Links) {
+  // $injector(['shortly.services']);
   $scope.data = {};
   $scope.getLinks = function(){
     //get links from mongodb
     //callback will set data array equal to links from db
-    $http.get('/api/links')
-      .then(function(response){
-        console.log(response.data);
-        $scope.data.links = response.data;
-      })
-      .catch(function(error){
-        throw error;
-      });
+    Links.getLinks().then(function(data){
+      $scope.data.links = data;
+    });
 
   };
   $scope.getLinks();
-  // SHOULD HAVE: .data, .getLinks()
-  // contains some logic
-  //
+
 });

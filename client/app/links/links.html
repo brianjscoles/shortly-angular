@@ -1,8 +1,8 @@
 <div ng-controller="LinksController" id='container'>
-  <!-- {{ data.links }} -->
 
+<span>Filter links: </span><input ng-model="search">
   <ul>
-    <li ng-repeat="link in data.links"> <a href={{link.code}}>127.0.0.1:3000/code:{{link.code}}</a> - {{ link.title }}</li>
+    <li ng-repeat="link in data.links | filter:search | orderBy:'-visits'"> <a href={{link.longURL}}>{{link.longURL}}</a> - {{ link.title }} | view count: {{ link.visits }}</li>
   </ul>
 </div>
 

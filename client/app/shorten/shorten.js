@@ -1,21 +1,15 @@
-angular.module('shortly.shorten', [])
+angular.module('shortly.shorten', ['shortly.services'])
 
-.controller('ShortenController', function ($scope, $location, $http, Links) {
+.controller('ShortenController', ['$scope', '$location', '$http', 'Links', function ($scope, $location, $http, Links) {
   $scope.link = "";
   $scope.addLink = function(){
-    console.log('this is addlinks in shortencontroller');
-    console.log("input value is "+ $scope.link);
-    //add links to somewhere
-    $http.post('/api/links',JSON.stringify({url:$scope.link}))
-      .then(function(response){
-        console.log('RESPONSE FROM POST! ' + response.status);
-      })
-      .catch(function(error){
-        throw error;
-      });
-
+    Links.addLink($scope.link);
+    $scope.link = "";
   };
+
+  //do we need this invokation? i think not...
+  //$scope.addLink();
 
 
   // Your code here
-});
+}]);

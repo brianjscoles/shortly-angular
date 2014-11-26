@@ -121,8 +121,8 @@ input[type=url]:focus {
 
 
 .error {
-  border: red solid 4px;
-  padding: 10px;
+  color: darkred;
+  padding-left: 145px;
   margin: 0 10px;
 }
 
