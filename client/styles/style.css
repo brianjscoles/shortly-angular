@@ -104,7 +104,7 @@ form {
 }
 
 input {
-  width: 360px;
+  width: 200px;
   display: block;
   font-size: 13px;
   padding: 5px;
@@ -122,7 +122,6 @@ input[type=url]:focus {
 
 .error {
   color: darkred;
-  padding-left: 145px;
   margin: 0 10px;
 }
 
@@ -152,3 +151,37 @@ input[type=url]:focus {
   clear: both;
 }
 
+.linksContainer {
+  width: 75%;
+  margin: auto;
+  padding-top: 5px;
+}
+
+.singleLink {
+  width: 90%;
+  margin: 5px 5% 5px 5%;
+  background-color: gainsboro;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.viewCount {
+  position: absolute;
+  right: 5px;
+}
+
+.filterLinksInput {
+  position: relative;
+  left: 5%;
+}
+
+.linkTitle{
+  width: 85%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}

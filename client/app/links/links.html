@@ -1,9 +1,11 @@
 <div ng-controller="LinksController" id='container'>
-
-<span>Filter links: </span><input ng-model="search">
-  <ul>
-    <li ng-repeat="link in data.links | filter:search | orderBy:'-visits'"> <a href={{link.longURL}}>{{link.longURL}}</a> - {{ link.title }} | view count: {{ link.visits }}</li>
-  </ul>
+<div class="linksContainer">
+  <span class="filterLinksInput">Filter links: </span><input class="filterLinksInput" ng-model="search">
+      <div class="singleLink" ng-repeat="link in data.links | filter:search | orderBy:'-visits'">
+        <div><div class="linkTitle">{{ link.title }}</div><span class="viewCount">views: {{ link.visits }}</span></div>
+        <div><a href={{link.longURL}}>{{link.longURL}}</a></div>
+      </div>
+  </div>
 </div>
 
 

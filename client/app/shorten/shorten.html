@@ -2,7 +2,7 @@
   <form name='inputForm'>
     Enter URL to shorten:<input type='url' name='input' ng-model='link' required>
     <button ng-disabled="inputForm.$invalid" ng-click='addLink()'>Clicky McCickerton</button>
-    <div class="error" ng-show="inputForm.input.$error.url">Please enter a valid url.</div>
+    <div class="error" style="padding-left: 145px;" ng-show="inputForm.input.$error.url">Please enter a valid url.</div>
   </form>
 </div>
 
